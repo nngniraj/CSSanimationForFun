@@ -1,0 +1,115 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    
+    #universe {
+        height: 100%;
+        width: 100%;
+        background: radial-gradient(#333, #000);
+    }
+    
+    .stars {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        background: url(../img/Stars.png);
+        animation: starsFade 1s alternate infinite;
+    }
+    
+    @keyframes starsFade {
+        from {
+            opacity: 1
+        }
+        to {
+            opacity: 0.5
+        }
+    }
+    
+    .sun {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -70px;
+        margin-left: -70px;
+        height: 143px;
+        width: 143px;
+        border-radius: 100%;
+        background: -webkit-radial-gradient(orange, yellow);
+        box-shadow: -webkit-(0 0 50px #f5c91a);
+        box-shadow: 0 0 50px #f5c91a;
+        animation: sunGlow 3s alternate infinite;
+    }
+    
+    @keyframes sunGlow {
+        from {
+            -webkit-box-shadow: 0 0 50px #f5c91a;
+            box-shadow: 0 0 50px #f5c91a;
+        }
+        to {
+            -webkit-box-shadow: 0 0 80px #f5c91a;
+            box-shadow: 0 0 80px #f5c91a;
+        }
+    }
+    
+    .earth-orbit {
+        height: 455px;
+        width: 415px;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 19%;
+        left: 52%;
+        margin-top: -30px;
+        margin-left: -250px;
+        z-index: 2;
+        animation: spin 36s linear infinite;
+    }
+    
+    .earth {
+        position: absolute;
+        top: 50%;
+        border-radius: 100%;
+        animation: spin 20s linear infinite;
+    }
+    
+    @keyframes spin {
+        from {
+            transform: rotate(0)
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    .moon-orbit {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 50%;
+        left: -14px;
+        margin-top: -15px;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        animation: spin 20s reverse linear infinite;
+        
+    }
+
+#moon{
+    height: 15px;
+    width: 15px;
+    background-color: #999;
+    z-index: 4;
+    border-radius: 100%;
+    animation: spin 17s infinite;
+}
+
+
